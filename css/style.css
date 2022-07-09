@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-card: #e1e1e6;
+  --bg-card-hover: #02799d;
+}
+
+body {
+  transition: background 300ms;
+  background: #c5c5c5;
+  font-size: 1.6rem;
+  text-align: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+body.dark-mode {
+  transition: background 300ms;
+  background: #2e2e2e;
+}
+
+.page {
+  height: 75vh;
+  width: clamp(32rem, 75vw, 112rem);
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.displayTimer span {
+  font-size: 7.2rem;
+  color: white;
+}
+
+.displayTimer .controls {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.displayTimer .controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.displayTimer .controls button svg path {
+  width: 100%;
+  height: 100%;
+}
+
+.displayTimer .controls button:hover svg path {
+  fill: rgb(97, 97, 146);
+}
+
+.displayTimer .controls .hide {
+  display: none;
+}
+
+.displayCards {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.displayCards .card {
+  display: flex;
+  width: 10rem;
+  height: 10rem;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-card);
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.displayCards button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.displayCards .card.press {
+  background: var(--bg-card-hover);
+  transition: 500ms;
+}
+
+.displayCards .card.press svg path {
+  fill: white;
+  transition: 200ms;
+}
+
+.displayCards .card .audio-sound {
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.displayCards .card .audio-sound.hidden {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .page {
+    text-align: center;
+    display: grid;
+    grid-template-areas: 'A B';
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+  }
+}

@@ -1,0 +1,16 @@
+header {
+  padding: 2rem;
+  display: flex;
+  justify-content: end;
+}
+
+header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+header .hide {
+  display: none;
+}
+
