@@ -3,6 +3,7 @@ export function Sounds() {
   const audioRain = new Audio('./sounds/Chuva.wav')
   const audioCoffe = new Audio('./sounds/Cafeteria.wav')
   const audioFire = new Audio('./sounds/Lareira.wav')
+  const endTimer = new Audio('./sounds/endTimerAlarm.wav')
 
   const volumeTree = document.querySelector('#volumeTree')
   const volumeCloud = document.querySelector('#volumeCloud')
@@ -31,6 +32,11 @@ export function Sounds() {
     }
   }
 
+  function endTimerSound(){
+    endTimer.play()
+    endTimer.loop = true
+  }
+
   volumeTree.addEventListener('input', function () {
     audioTree.volume = volumeTree.value
   })
@@ -57,6 +63,8 @@ export function Sounds() {
     cardButtonHut,
     cardButtonFire,
     playSound,
+    endTimer,
+    endTimerSound,
     volumeTree,
     volumeCloud,
     volumeHut,

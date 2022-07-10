@@ -4,12 +4,14 @@ export function functionsButtons({
   buttonStop,
   buttonSun,
   buttonMoon,
+  endTimer,
   body
 }) {
   function resetButtons() {
     buttonPlay.classList.remove('hide')
     buttonPause.classList.add('hide')
     buttonStop.classList.add('hide')
+    endTimer.pause()
   }
 
   function backgroundDarkMode() {

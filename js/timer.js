@@ -2,7 +2,7 @@ export function Timer({
   displayMinutes,
   displaySeconds,
   minutes,
-  resetButtons
+  endTimerSound,
 }) {
   let timer
 
@@ -12,7 +12,7 @@ export function Timer({
       let seconds = Number(displaySeconds.textContent)
 
       if (minutes <= 0 && seconds <= 0) {
-        resetButtons()
+        endTimerSound()
         resetTimer()
         return
       }
@@ -34,8 +34,11 @@ export function Timer({
   }
 
   function setTimer() {
-    let newMinutes = Number(prompt('Quantos minutos?'))
-    if (!newMinutes) {
+    let newMinutes = parseInt(prompt('Quantos minutos?'))
+    if (newMinutes <= 0) {
+      alert('Número inválido!')
+      return
+    } else if (!newMinutes) {
       updateDisplayMinutesTimer(minutes, 0)
       return
     }
