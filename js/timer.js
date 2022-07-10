@@ -17,7 +17,7 @@ export function Timer({
       }
 
       if (seconds <= 0) {
-        seconds = 5
+        seconds = 2
         --minutes
       }
 
@@ -34,7 +34,7 @@ export function Timer({
 
   function setTimer() {
     let newMinutes = parseInt(prompt('Quantos minutos?'))
-    if (newMinutes <= 0) {
+    if (newMinutes < 0) {
       alert('Número inválido!')
       return
     } else if (!newMinutes) {

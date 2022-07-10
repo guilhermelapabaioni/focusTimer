@@ -1,3 +1,5 @@
+import { buttonStop } from './elements.js'
+
 export function Sounds() {
   const audioTree = new Audio('./sounds/Floresta.wav')
   const audioRain = new Audio('./sounds/Chuva.wav')
@@ -35,6 +37,7 @@ export function Sounds() {
   function endTimerSound(){
     endTimer.play()
     endTimer.loop = true
+    buttonStop.classList.add('endTime')
   }
 
   volumeTree.addEventListener('input', function () {

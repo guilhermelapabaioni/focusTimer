@@ -43,6 +43,7 @@ export function buttonEvents({
   buttonStop.addEventListener('click', function () {
     resetButtons()
     resetTimer()
+    buttonStop.classList.remove('endTime')
   })
 
   buttonSet.addEventListener('click', function () {

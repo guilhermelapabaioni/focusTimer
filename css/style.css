@@ -66,6 +66,10 @@ body.dark-mode {
   display: none;
 }
 
+.stop.endTime svg path{
+  fill: red;
+}
+
 .displayCards {
   display: flex;
   justify-content: center;
