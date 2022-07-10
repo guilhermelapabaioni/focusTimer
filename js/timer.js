@@ -2,7 +2,7 @@ export function Timer({
   displayMinutes,
   displaySeconds,
   minutes,
-  endTimerSound,
+  endTimerSound
 }) {
   let timer
 
@@ -13,7 +13,6 @@ export function Timer({
 
       if (minutes <= 0 && seconds <= 0) {
         endTimerSound()
-        resetTimer()
         return
       }
 
